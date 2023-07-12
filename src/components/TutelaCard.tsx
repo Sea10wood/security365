@@ -7,24 +7,35 @@ import Typography from "@mui/material/Typography";
 
 export default function TopCardMain() {
     return (
-        <Card sx={{ maxWidth: 345, marginBottom: 5 }}>
+        <>
             <CardMedia
                 component="img"
-                alt="favicon"
-                height="140"
-                image="favicon.ico"
+                alt="icon"
+                image="blue_security.png"
+                sx={{
+                    width: 300,
+                    height: 300,
+                    margin: "auto",
+                    marginTop: "35%",
+                    borderRadius: "50%",
+                }}
             />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    このサイトに関して
-                </Typography>
-                <Typography variant="body2" color="text.secondary"></Typography>
-                　
-            </CardContent>
-            <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-        </Card>
+            <Card sx={{ width: "65vw", marginBottom: 5, marginTop: -5 }}>
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                        このサイトに関して
+                    </Typography>
+                    <Typography
+                        variant="body2"
+                        color="text.secondary"
+                    ></Typography>
+                    　
+                </CardContent>
+                <CardActions>
+                    <Button size="small">Share</Button>
+                    <Button size="small">Learn More</Button>
+                </CardActions>
+            </Card>
+        </>
     );
 }
