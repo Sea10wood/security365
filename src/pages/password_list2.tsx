@@ -2,16 +2,14 @@ import Header from "@/components/Header";
 import PullDownID from "@/components/pulldownID";
 
 import useWindowSize from "@/hooks/Windowsize";
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Passwordlist = () => {
     const [width, height] = useWindowSize();
     const [visitorCount, setVisitorCount] = useState(0);
-    const [id, setID] = useState("");
-    const [password, setPassword] = useState("");
 
     useEffect(() => {
         const fetchVisitorCount = async () => {
@@ -24,14 +22,6 @@ const Passwordlist = () => {
 
         fetchVisitorCount();
     }, []);
-
-    const handlePullDownIDChange = (event: {
-        target: { value: SetStateAction<string> };
-    }) => {
-        setID(event.target.value);
-    };
-
-    const isSuccessB = id === "iiiiiii@mail.com" && password === "aaaa12345";
 
     return (
         <>
@@ -61,7 +51,7 @@ const Passwordlist = () => {
                         fontSize: 30,
                         fontWeight: "bold",
                         color: "#0000000",
-                        zIndex: 1,
+                        zIndex: 2,
                     }}
                 >
                     パスワードリスト攻撃
@@ -79,42 +69,29 @@ const Passwordlist = () => {
                     <div
                         style={{ position: "absolute", top: "57%", left: "3%" }}
                     >
-                        <PullDownID onChange={handlePullDownIDChange} />
-
-                        {isSuccessB && (
-                            <Typography
-                                sx={{
-                                    position: "absolute",
-                                    top: "100%",
-                                    left: "5%",
-                                    fontSize: 20,
-                                    fontWeight: "bold",
-                                    color: "green",
-                                    zIndex: 1,
-                                }}
-                            >
-                                成功
-                            </Typography>
-                        )}
+                        <PullDownID />
+                        <Button variant="text" sx={{ left: 50 }}>
+                            Login
+                        </Button>
                     </div>
 
                     <div
                         style={{
                             position: "absolute",
                             top: "57%",
-                            left: "29.5%",
+                            left: "35%",
                         }}
                     >
-                        <PullDownID onChange={handlePullDownIDChange} />
+                        <PullDownID />
                     </div>
                     <div
                         style={{
                             position: "absolute",
                             top: "57%",
-                            left: "56%",
+                            left: "68%",
                         }}
                     >
-                        <PullDownID onChange={handlePullDownIDChange} />
+                        <PullDownID />
                     </div>
                 </div>
 
@@ -144,7 +121,7 @@ const Passwordlist = () => {
                         zIndex: 1,
                     }}
                 >
-                    サイト訪問者数: {visitorCount}
+                    この攻撃を理解した人数: {visitorCount}
                 </Typography>
             </div>
         </>

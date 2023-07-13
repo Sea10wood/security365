@@ -27,14 +27,31 @@ export default function TopCardVirus() {
                 <Card sx={{ width: "30vw", marginTop: "-10vh" }}>
                     <CardContent>
                         <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            marginTop="10vh"
+                        >
+                            ウイルス感染
+                        </Typography>
+                        <Typography
                             variant="body2"
                             color="text.secondary"
                             marginTop="10%"
                         >
-                            攻撃者があらかじめ何らかの方法で入手した、
-                            サービスやシステムのIDとパスワードをリスト化
-                            したデータを利用し、不正に企業や組織の
-                            Webサイトへの不正アクセスを試みるという攻撃方法
+                            ウイルス感染とは:
+                            コンピューターがウイルス感染すると、攻撃者にシステムのファイルやデータに対し不正な操作を実行されます。
+                            よくある感染経路としては、メールの添付ファイルや、悪意のあるウェブサイトからダウンロードしたファイルがあります。
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="text.secondary"
+                            marginTop="10%"
+                        >
+                            学習項目: ・感染経路例。 ・感染することによる影響。
+                            ・ウイルスの種類。
+                            ・セキュリティソフトを導入し、ウイルス感染を防止する。
+                            ・ソフトウェアを最新に保つ重要性。
                         </Typography>
                         　
                     </CardContent>

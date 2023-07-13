@@ -1,4 +1,5 @@
 import ButtonLeft from "@/components/ButtonLeft";
+import ButtonRight from "@/components/ButtonRight";
 import ButtonRightTop from "@/components/ButtonRightTop";
 import Header from "@/components/Header";
 import useWindowSize from "@/hooks/Windowsize";
@@ -76,8 +77,8 @@ const PasswordlistEx3 = () => {
                         width={835.2}
                         height={606}
                     ></Image>
-                    <Link href="/">
-                        <ButtonRightTop />
+                    <Link href="/Understand">
+                        <ButtonRight />
                     </Link>
                 </div>
 
@@ -89,7 +90,7 @@ const PasswordlistEx3 = () => {
                         fontSize: 30,
                         fontWeight: "bold",
                         color: "#000000",
-                        zIndex: 1,
+                        zIndex: 2,
                     }}
                 >
                     この攻撃を理解した人数: {visitorCount}

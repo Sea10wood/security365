@@ -27,14 +27,30 @@ export default function TopCardSNS() {
                 <Card sx={{ width: "30vw", marginTop: "-10vh" }}>
                     <CardContent>
                         <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            marginTop="10vh"
+                        >
+                            SNSにおける
+                        </Typography>
+                        <Typography
                             variant="body2"
                             color="text.secondary"
                             marginTop="10%"
                         >
-                            攻撃者があらかじめ何らかの方法で入手した、
-                            サービスやシステムのIDとパスワードをリスト化
-                            したデータを利用し、不正に企業や組織の
-                            Webサイトへの不正アクセスを試みるという攻撃方法
+                            SNSにおける危険性とは:
+                            SNSは便利な反面、投稿や共有した写真などから、第三者に個人情報、場所などが推測されてしまう可能性があります。他にも、悪意のあるユーザから攻撃を受ける可能性もあります。
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="text.secondary"
+                            marginTop="10%"
+                        >
+                            学習項目:
+                            ・個人情報やプライバシーを過度に公開しない。
+                            ・怪しいリンクをクリックしない。
+                            ・不審なメッセージを開かない。
                         </Typography>
                         　
                     </CardContent>

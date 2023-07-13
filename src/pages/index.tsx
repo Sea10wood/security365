@@ -6,7 +6,6 @@ import TopCardSNS from "@/components/TopCardSNS";
 import TopCardVirus from "@/components/TopCardVirus";
 import TopCardMain from "@/components/TutelaCard";
 import useWindowSize from "@/hooks/Windowsize";
-import Image from "next/image";
 
 const TopPage = () => {
     const [width, height] = useWindowSize();
@@ -25,40 +24,32 @@ const TopPage = () => {
                 <Header />
             </div>
 
-            <div style={{ position: "relative" }}>
-                <Image
-                    src="/whiteback.png"
-                    alt="back"
-                    width={width}
-                    height={height}
-                />
+            <div
+                style={{
+                    position: "absolute",
+                    top: "170%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                }}
+            >
+                <TopCardMain />
+
                 <div
                     style={{
-                        position: "absolute",
-                        top: "100%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr",
+                        gap: "20px",
+                        marginTop: "20px",
                     }}
                 >
-                    <TopCardMain />
-
-                    <div
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns: "1fr 1fr",
-                            gap: "20px",
-                            marginTop: "20px",
-                        }}
-                    >
-                        <TopCardPassword />
-                        <TopCardVirus />
-                        <TopCardPasswordRead />
-                        <TopCardSNS />
-                        <TopCardFakesite />
-                    </div>
+                    <TopCardPassword />
+                    <TopCardVirus />
+                    <TopCardPasswordRead />
+                    <TopCardSNS />
+                    <TopCardFakesite />
                 </div>
             </div>
         </>

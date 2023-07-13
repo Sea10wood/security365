@@ -51,7 +51,7 @@ const PasswordList = () => {
                         fontSize: 30,
                         fontWeight: "bold",
                         color: "#000000",
-                        zIndex: 1,
+                        zIndex: 2,
                     }}
                 >
                     パスワードリスト攻撃

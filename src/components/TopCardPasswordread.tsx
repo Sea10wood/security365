@@ -27,14 +27,29 @@ export default function TopCardFakesite() {
                 <Card sx={{ width: "30vw", marginTop: "-10vh" }}>
                     <CardContent>
                         <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            marginTop="10vh"
+                        >
+                            パスワード解読
+                        </Typography>
+                        <Typography
                             variant="body2"
                             color="text.secondary"
                             marginTop="10%"
                         >
-                            攻撃者があらかじめ何らかの方法で入手した、
-                            サービスやシステムのIDとパスワードをリスト化
-                            したデータを利用し、不正に企業や組織の
-                            Webサイトへの不正アクセスを試みるという攻撃方法
+                            パスワード解読とは:
+                            攻撃者がパスワードを推測またはツールを利用し解読することで、ユーザーのアカウントに不正にアクセスする攻撃です。
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="text.secondary"
+                            marginTop="10%"
+                        >
+                            学習項目: ・パスワードを複雑かつ長く設定する必要性。
+                            ・ランダムな文字列をパスワードに使用する。
+                            ・二要素認証を利用する。
                         </Typography>
                         　
                     </CardContent>

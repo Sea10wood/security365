@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function TopCardFakesite() {
     return (
-        <Link href="/Start">
+        <Link href="/comming_soon">
             <div style={{ width: "30vw" }}>
                 <CardMedia
                     component="img"
@@ -27,14 +27,29 @@ export default function TopCardFakesite() {
                 <Card sx={{ width: "30vw", marginTop: "-10vh" }}>
                     <CardContent>
                         <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            marginTop="10vh"
+                        >
+                            フェイクサイト
+                        </Typography>
+                        <Typography
                             variant="body2"
                             color="text.secondary"
                             marginTop="10%"
                         >
-                            攻撃者があらかじめ何らかの方法で入手した、
-                            サービスやシステムのIDとパスワードをリスト化
-                            したデータを利用し、不正に企業や組織の
-                            Webサイトへの不正アクセスを試みるという攻撃方法
+                            フェイクサイトとは:
+                            正規のサイトと見分けがつかないほど精巧に作られた偽のウェブサイトです。例えば、攻撃者が偽のECサイトを作成し、ユーザーを騙して個人情報(パスワード、クレジットカード情報など)を入力させ、情報を盗み取る攻撃をフィッシング攻撃と呼びます。
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="text.secondary"
+                            marginTop="10%"
+                        >
+                            ・フェイクサイトを見分ける方法。
+                            ・誤って情報を入力した場合の対応。
+                            ・セキュリティソフトを導入し、アクセスをブロックする。
                         </Typography>
                         　
                     </CardContent>

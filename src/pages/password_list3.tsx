@@ -33,20 +33,20 @@ const Passwordlist = () => {
             </div>
             <div style={{ position: "relative", display: "inline-block" }}>
                 <Image
-                    src="/whiteback.png\"
-                    alt=""
+                    src="/whiteback.png"
+                    alt="back"
                     width={width}
                     height={height}
                 ></Image>
                 <Typography
                     sx={{
                         position: "absolute",
-                        top: 4,
+                        top: 40,
                         left: 5,
                         fontSize: 30,
                         fontWeight: "bold",
                         color: "#0000000",
-                        zIndex: 1,
+                        zIndex: 2,
                     }}
                 >
                     パスワードリスト攻撃
@@ -67,7 +67,7 @@ const Passwordlist = () => {
                         height={606}
                     ></Image>
                 </div>
-                <Link href="/password_list4\">
+                <Link href="/measure">
                     <Typography
                         sx={{
                             position: "fixed",
@@ -88,7 +88,7 @@ const Passwordlist = () => {
                 <Typography
                     sx={{
                         position: "fixed",
-                        bottom: "10% ",
+                        bottom: "8% ",
                         left: "40%",
                         fontSize: 30,
                         fontWeight: "bold",
