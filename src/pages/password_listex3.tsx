@@ -1,5 +1,5 @@
 import ButtonLeft from "@/components/ButtonLeft";
-import ButtonRight from "@/components/ButtonRight";
+import ButtonRightTop from "@/components/ButtonRightTop";
 import Header from "@/components/Header";
 import useWindowSize from "@/hooks/Windowsize";
 import { Typography } from "@mui/material";
@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const Passwordlist = () => {
+const PasswordlistEx3 = () => {
     const [width, height] = useWindowSize();
     const [visitorCount, setVisitorCount] = useState(0);
 
@@ -53,6 +53,7 @@ const Passwordlist = () => {
                 >
                     パスワードリスト攻撃
                 </Typography>
+
                 <div
                     style={{
                         display: "flex",
@@ -65,17 +66,18 @@ const Passwordlist = () => {
                         zIndex: 1,
                     }}
                 >
-                    <Link href="/password_list3">
+                    <Link href="/password_list2">
                         <ButtonLeft />
                     </Link>
+
                     <Image
-                        src="/PasswordListAttack1.png"
+                        src="/PasswordListAttack3.png"
                         alt="detail"
                         width={835.2}
                         height={606}
-                    />
-                    <Link href="/password_listex2">
-                        <ButtonRight />
+                    ></Image>
+                    <Link href="/">
+                        <ButtonRightTop />
                     </Link>
                 </div>
 
@@ -90,10 +92,10 @@ const Passwordlist = () => {
                         zIndex: 1,
                     }}
                 >
-                    理解した人数: {visitorCount}
+                    この攻撃を理解した人数: {visitorCount}
                 </Typography>
             </div>
         </>
     );
 };
-export default Passwordlist;
+export default PasswordlistEx3;

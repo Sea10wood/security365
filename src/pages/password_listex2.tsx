@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const Passwordlist = () => {
+const PasswordlistEx2 = () => {
     const [width, height] = useWindowSize();
     const [visitorCount, setVisitorCount] = useState(0);
 
@@ -65,16 +65,16 @@ const Passwordlist = () => {
                         zIndex: 1,
                     }}
                 >
-                    <Link href="/password_list3">
+                    <Link href="/password_list2">
                         <ButtonLeft />
                     </Link>
                     <Image
-                        src="/PasswordListAttack1.png"
+                        src="/PasswordListAttack2.png"
                         alt="detail"
                         width={835.2}
                         height={606}
-                    />
-                    <Link href="/password_listex2">
+                    ></Image>
+                    <Link href="/password_listex3">
                         <ButtonRight />
                     </Link>
                 </div>
@@ -90,10 +90,10 @@ const Passwordlist = () => {
                         zIndex: 1,
                     }}
                 >
-                    理解した人数: {visitorCount}
+                    サイト訪問者数: {visitorCount}
                 </Typography>
             </div>
         </>
     );
 };
-export default Passwordlist;
+export default PasswordlistEx2;

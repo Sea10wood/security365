@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 
 export default function TopCardMain() {
     return (
-        <>
+        <div>
             <CardMedia
                 component="img"
                 alt="icon"
@@ -36,6 +36,6 @@ export default function TopCardMain() {
                     <Button size="small">Learn More</Button>
                 </CardActions>
             </Card>
-        </>
+        </div>
     );
 }

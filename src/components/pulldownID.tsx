@@ -13,23 +13,25 @@ export default function PullDownID() {
     };
 
     return (
-        <Box sx={{ minWidth: 190, marginTop: 2 }}>
+        <Box sx={{ minWidth: 246, maxWidth: 246, marginTop: 2 }}>
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">ID</InputLabel>
+                <InputLabel id="demo-simple-select-label">
+                    ID/Password
+                </InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={id}
-                    label="ID"
+                    label="ID/Password"
                     onChange={handleChange}
                 >
-                    <MenuItem value={1}>aaaaa@mail.com</MenuItem>
-                    <MenuItem value={2}>iiiiiii@mail.com</MenuItem>
-                    <MenuItem value={3}>uuuuu@mail.com</MenuItem>
-                    <MenuItem value={4}>eeeee@mail.com</MenuItem>
-                    <MenuItem value={5}>ooooo@mail.com</MenuItem>
-                    <MenuItem value={6}>kakiku@mail.com</MenuItem>
-                    <MenuItem value={7}>kekosa@mail.com</MenuItem>
+                    <MenuItem value={1}>aaaaa@mail.com/aaaa12345</MenuItem>
+                    <MenuItem value={2}>iiiiiii@mail.com/iiiiiiii6789</MenuItem>
+                    <MenuItem value={3}>uuuuu@mail.com/uuuu1012</MenuItem>
+                    <MenuItem value={4}>eeeee@mail.com/eeeee1345</MenuItem>
+                    <MenuItem value={5}>ooooo@mail.com/oooo2345</MenuItem>
+                    <MenuItem value={6}>kakiku@mail.com/kakiku2678</MenuItem>
+                    <MenuItem value={7}>kekosa@mail.com/kkekosa9010</MenuItem>
                 </Select>
             </FormControl>
         </Box>

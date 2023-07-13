@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function TopCardPassword() {
+export default function TopCardFakesite() {
     return (
         <Link href="/Start">
             <div style={{ width: "30vw" }}>
