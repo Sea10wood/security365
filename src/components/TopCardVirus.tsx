@@ -16,7 +16,7 @@ export default function TopCardVirus() {
                     component="img"
                     alt="click_password"
                     height="150"
-                    image="Click_password.png"
+                    image="Virus.png"
                     sx={{
                         width: 210,
                         height: 210,
