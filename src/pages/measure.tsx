@@ -65,16 +65,16 @@ const PasswordlistEx2 = () => {
                         zIndex: 1,
                     }}
                 >
-                    <Link href="/password_list4">
+                    <Link href="/password_list3">
                         <ButtonLeft />
                     </Link>
                     <Image
-                        src="/PasswordListAttack2.png"
+                        src="/measures.png"
                         alt="detail"
                         width={835.2}
                         height={606}
                     ></Image>
-                    <Link href="/password_listex3">
+                    <Link href="/password_list4">
                         <ButtonRight />
                     </Link>
                 </div>

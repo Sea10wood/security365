@@ -65,7 +65,7 @@ const Passwordlist = () => {
                         zIndex: 2,
                     }}
                 >
-                    <Link href="/password_list3">
+                    <Link href="/measure">
                         <ButtonLeft />
                     </Link>
                     <Image

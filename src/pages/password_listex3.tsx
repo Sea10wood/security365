@@ -1,6 +1,5 @@
 import ButtonLeft from "@/components/ButtonLeft";
 import ButtonRight from "@/components/ButtonRight";
-import ButtonRightTop from "@/components/ButtonRightTop";
 import Header from "@/components/Header";
 import useWindowSize from "@/hooks/Windowsize";
 import { Typography } from "@mui/material";
@@ -67,7 +66,7 @@ const PasswordlistEx3 = () => {
                         zIndex: 1,
                     }}
                 >
-                    <Link href="/password_list2">
+                    <Link href="/password_listex2">
                         <ButtonLeft />
                     </Link>
 
