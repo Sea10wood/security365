@@ -1,27 +1,16 @@
 import Header from "@/components/Header";
 import PullDownID from "@/components/pulldownID";
-
 import useWindowSize from "@/hooks/Windowsize";
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Modal, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import React from "react";
 
 const Passwordlist = () => {
     const [width, height] = useWindowSize();
-    const [visitorCount, setVisitorCount] = useState(0);
-
-    useEffect(() => {
-        const fetchVisitorCount = async () => {
-            const response = await fetch(
-                "https://api.example.com/visitorCount"
-            );
-            const data = await response.json();
-            setVisitorCount(data.count);
-        };
-
-        fetchVisitorCount();
-    }, []);
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     return (
         <>
@@ -70,9 +59,41 @@ const Passwordlist = () => {
                         style={{ position: "absolute", top: "57%", left: "3%" }}
                     >
                         <PullDownID />
-                        <Button variant="text" sx={{ left: 50 }}>
+                        <Button
+                            onClick={handleOpen}
+                            variant="text"
+                            sx={{ left: "70%" }}
+                        >
                             Login
                         </Button>
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                        >
+                            <Box
+                                sx={{
+                                    width: 300,
+                                    height: 50,
+                                    bgcolor: "white",
+                                    border: "1px solid black",
+                                    p: 2,
+                                    left: "50%",
+                                    top: "50%",
+                                    margin: "20% auto",
+                                }}
+                            >
+                                <Typography
+                                    variant="h6"
+                                    component="h2"
+                                    color="red"
+                                    margin="auto"
+                                >
+                                    1件のログインに成功
+                                </Typography>
+                            </Box>
+                        </Modal>
                     </div>
 
                     <div
@@ -83,6 +104,41 @@ const Passwordlist = () => {
                         }}
                     >
                         <PullDownID />
+                        <Button
+                            variant="text"
+                            sx={{ left: "70%" }}
+                            onClick={handleOpen}
+                        >
+                            Login
+                        </Button>
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                        >
+                            <Box
+                                sx={{
+                                    width: 300,
+                                    height: 50,
+                                    bgcolor: "white",
+                                    border: "1px solid black",
+                                    p: 2,
+                                    left: "50%",
+                                    top: "50%",
+                                    margin: "20% auto",
+                                }}
+                            >
+                                <Typography
+                                    variant="h6"
+                                    component="h2"
+                                    color="red"
+                                    margin="auto"
+                                >
+                                    1件のログインに成功
+                                </Typography>
+                            </Box>
+                        </Modal>
                     </div>
                     <div
                         style={{
@@ -92,6 +148,37 @@ const Passwordlist = () => {
                         }}
                     >
                         <PullDownID />
+                        <Button variant="text" sx={{ left: "70%" }}>
+                            Login
+                        </Button>
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                        >
+                            <Box
+                                sx={{
+                                    width: 300,
+                                    height: 50,
+                                    bgcolor: "white",
+                                    border: "1px solid black",
+                                    p: 2,
+                                    left: "50%",
+                                    top: "50%",
+                                    margin: "20% auto",
+                                }}
+                            >
+                                <Typography
+                                    variant="h6"
+                                    component="h2"
+                                    color="red"
+                                    margin="auto"
+                                >
+                                    1件のログインに成功
+                                </Typography>
+                            </Box>
+                        </Modal>
                     </div>
                 </div>
 
@@ -105,6 +192,9 @@ const Passwordlist = () => {
                             fontWeight: "bold",
                             color: "#FF0000",
                             zIndex: 1,
+                            borderRadius: "10px",
+                            border: "4px solid #FF0000",
+                            padding: "10px",
                         }}
                     >
                         Next ▶︎
@@ -121,7 +211,7 @@ const Passwordlist = () => {
                         zIndex: 1,
                     }}
                 >
-                    この攻撃を理解した人数: {visitorCount}
+                    この攻撃を理解した人数:1
                 </Typography>
             </div>
         </>
